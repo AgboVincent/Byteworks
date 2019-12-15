@@ -1,0 +1,1194 @@
+//home.component.html file
+<form class="router">
+
+        <button class="login" routerLink="/login"> Login</button>
+        <button class="admin" routerLink="/default"  > Go to Admin</button>
+       
+
+</form>
+
+//home.component.css
+ .router{
+    margin-top: 30px;
+    top: 50%;
+    display: flex;
+    background-size: auto;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSALXIP6boA-JWzk5pTvpyL4doVZJ_Z_HHYmqvmLm_5T0RhxtBr");
+    justify-content: center;
+    position: absolute;
+    height: 60vh;
+    width: 60vh;
+    align-self: center;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+    }
+
+    .login{
+        margin-right: 50px;
+        margin-top: 200px;
+        background-color:red;
+        height:40px;
+        width:100px;
+
+    }
+    .admin{
+        
+        background-color:greenyellow;
+        height:40px;
+        width:100px;
+        margin-top: 200px;
+        text-decoration-color: cornsilk;
+    }
+    
+    
+    //home.component.ts
+    import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.css']
+})
+export class HomeComponent implements OnInit {
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+}
+
+   
+   
+   
+   //login.component.html
+   
+   <form class="center">
+    <p class="hd">Member Login</p> 
+    <div>
+     <input class="email" stype="email" id="defaultLoginFormEmail"  placeholder="E-mail" >
+     </div>
+      <div>
+       <input class="password"type="password" id="defaultLoginFormPassword"  placeholder="Password" size="50"><br>
+    </div>
+
+      <mdb-checkbox class="ch" [default]="true">Save Password
+            <a class="hh" href="">Forgot password?</a>
+      </mdb-checkbox>
+  <button class="info" block="true" type="submit"
+         routerLink="/objective"> Sign in</button>
+
+  <!-- Register -->
+  <p class="not">Not a member?
+    <a href="/member">Register
+           
+    </a>
+  </p>
+</form> 
+
+
+//login.component.css
+.center  {
+    margin: 0;
+    top: 50%;
+    display: flow-root;
+    background-color: mediumaquamarine;
+    background-size: auto;
+    justify-content: center;
+    position: absolute;
+    height: 40vh;
+    width: 55vh;
+    align-self: center;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    }  
+    .info {
+        margin-left: 10px;
+        height:30px;
+        background-color: forestgreen;
+        width:400px;
+        margin-top: 10px;
+    }
+    .email {
+        margin-left: 10px;
+        background-color:white;
+        height:30px;
+        width:400px;
+
+
+    }
+    .password {
+        margin-left: 10px;
+        background-color:white;
+        height:30px;
+        width:400px;
+        margin-top: 15px;
+      
+    }
+
+    .ch{
+        margin-left: 20px;
+        margin-right: 10px;
+        
+        
+        //login.component.ts
+        import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.css']
+})
+export class LoginComponent implements OnInit {
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+  loginMember(event){
+    event.preventDefault()
+    console.log(event)
+
+  }
+
+}
+
+
+
+//register.component.html
+<form class="register">
+        <p class="hd">REGISTER</p> 
+        <div>
+          <input class="firstname" type="name" placeholder="First Name" >
+            </div>
+                <div>
+                    <input class="lastname" type="name"placeholder="Last Name" >
+                        </div>
+                    <div>
+               <input class="emailadd" type="email" placeholder="E-mail" >
+            </div>
+          <div>
+        <input class="passwordd"type="password" placeholder="Password" >
+        </div>
+        <div>
+         <input class="cpassword" type="password"  placeholder="Comfirm Password" >
+          </div>
+             
+      <button class="rbtn" block="true" type="submit">REGISTER</button>
+
+      <p class="not">Already Registerd?
+            <a href="/login">Login
+                   
+            </a>
+          </p>
+    
+    </form> 
+    
+    
+    //register.component.css
+    .register{
+    top: 50%;
+    display: flow-root;
+    background-color:rgb(47, 255, 168);
+    background-size: auto;
+    justify-content: center;
+    position: absolute;
+    height: 53vh;
+    width: 57vh;
+    align-self: center;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    }
+    .firstname{
+      
+            margin-left: 15px;
+            background-color:white;
+            height:30px;
+            width:400px;
+            margin-top: 15px;
+          
+    }
+    .lastname{
+        margin-left: 15px;
+        background-color:white;
+        height:30px;
+        width:400px;
+        margin-top: 15px;
+    }
+    .emailadd{
+        margin-top: 15px;
+        margin-left: 15px;
+        background-color:white;
+        height:30px;
+        width:400px;
+    }
+    .passwordd{
+        margin-top: 15px;
+        margin-left: 15px;
+        background-color:white;
+        height:30px;
+        width:400px;
+    }
+    .cpassword{
+        margin-left: 15px;
+        background-color:white;
+        height:30px;
+        width:400px;
+        margin-top: 15px;
+
+    }
+    .rbtn{
+        margin-left: 15px;
+        background-color:rgb(16, 180, 65);
+        height:30px;
+        width:400px;
+        margin-top: 15px;
+
+    }
+    
+    
+    //register.component.ts
+    import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-member',
+  templateUrl: './member.component.html',
+  styleUrls: ['./member.component.css']
+})
+export class MemberComponent implements OnInit {
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+}
+
+
+
+   // default.component.html
+   
+   <app-header (toggleSideBarForMe)="sideBarToggler($event)"></app-header>
+<mat-drawer-container>
+    <mat-drawer mode="side" [opened]="sideBarOpen">
+        <app-sidebar></app-sidebar>
+    </mat-drawer>
+    <mat-drawer-content>
+
+        <router-outlet></router-outlet>
+    </mat-drawer-content>
+</mat-drawer-container>
+<app-footer></app-footer>
+
+
+//default.component.css
+:host{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.mat-drawer{
+    width: 350px;
+}
+.mat-drawer-container{
+    height: 100%;
+}
+.mat-drawer-content{
+    padding: 20px;
+}
+
+
+
+//default.component.ts
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-default',
+  templateUrl: './default.component.html',
+  styleUrls: ['./default.component.css']
+})
+export class DefaultComponent implements OnInit {
+
+  sideBarOpen =true;
+
+  constructor() { }
+
+  ngOnInit() { }
+
+ sideBarToggler()
+ {
+    this.sideBarOpen = !this.sideBarOpen;
+  }
+
+}
+
+
+//dashboard.component.html
+<div>
+   <app-widget-area></app-widget-area>
+</div>
+
+<br>
+
+<mat-divider></mat-divider>
+
+<br>
+
+<div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="20px"  class="stats-cards">
+    <mat-card fxFlex= "25">
+        <app-widget-card label="Excellence "><img src="https://byteworks.com.ng/images/excellence-icon.png" ></app-widget-card>
+    </mat-card>
+    <mat-card fxFlex= "25">
+        <app-widget-card label="Commitment" ><img src="https://byteworks.com.ng/images/commitment-icon.png" ></app-widget-card>
+    </mat-card>
+    <mat-card fxFlex= "25">
+        <app-widget-card label="Innovation" ><img src="https://byteworks.com.ng/images/innovation-icon.png" ></app-widget-card>
+     </mat-card>
+    <mat-card fxFlex= "25">
+        <app-widget-card label="Integrity" ><img src="https://byteworks.com.ng/images/integrity-icon.png" > </app-widget-card>
+     </mat-card>
+    
+</div>
+
+<br>
+
+<mat-divider></mat-divider>
+
+<br>
+<div> Workers Data  Table</div>
+<div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="20px">
+    <div fxFlex="60">
+            <div class="mat-elevation-z8">
+                    <table mat-table [dataSource]="dataSource">
+                  
+                      <!-- Position Column -->
+                      <ng-container matColumnDef="position">
+                        <th mat-header-cell *matHeaderCellDef> No. </th>
+                        <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+                      </ng-container>
+                  
+                      <!-- Name Column -->
+                      <ng-container matColumnDef="name">
+                        <th mat-header-cell *matHeaderCellDef> Name </th>
+                        <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                      </ng-container>
+                  
+                      <!-- Weight Column -->
+                      <ng-container matColumnDef="weight">
+                        <th mat-header-cell *matHeaderCellDef> Age </th>
+                        <td mat-cell *matCellDef="let element"> {{element.age}} </td>
+                      </ng-container>
+                  
+                      <!-- Symbol Column -->
+                      <ng-container matColumnDef="symbol">
+                        <th mat-header-cell *matHeaderCellDef> State </th>
+                        <td mat-cell *matCellDef="let element"> {{element.state}} </td>
+                      </ng-container>
+                  
+                      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                    </table>
+                  
+                    <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+                  </div>
+    </div>
+    <!-- <div fxFlex=40>Pie Chart</div> -->
+</div>
+
+//dashboard.component.css
+mat-card{
+    overflow: hidden;
+}
+
+table {
+    width: 100%;
+  }
+  
+  
+  //dashboard.component.ts
+  import { Component, OnInit, ViewChild } from '@angular/core';
+import { MatTableDataSource, MatPaginator} from '@angular/material';
+import { from } from 'rxjs';
+
+export interface names {
+  name: string;
+  position: number;
+  age: number;
+  state: string;
+}
+const PROFILE_DATA: names[] = [
+  {position: 1, name: 'Agbo Vincent', age: 24, state: 'Enugu'},
+  {position: 2, name: 'Eze john', age: 27, state: 'Imo'},
+  {position: 3, name: 'Nwando Amara', age: 26, state: 'Anambra'},
+  {position: 4, name: 'Ike kenneth', age: 30, state: 'Enugu'},
+  {position: 5, name: 'Omeje Kinglsey', age: 34, state: 'Enugu'},
+  {position: 6, name: 'Ugwu John', age: 26, state: 'Anambra'},
+  {position: 7, name: 'Ugwuanyi kelechi', age: 34, state: 'Imo'},
+];
+@Component({
+  selector: 'app-dashboard',
+  templateUrl: './dashboard.component.html',
+  styleUrls: ['./dashboard.component.css']
+})
+export class DashboardComponent implements OnInit {
+
+
+displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
+  dataSource = new MatTableDataSource<names>(PROFILE_DATA);
+
+  @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
+
+  constructor() { }
+
+  ngOnInit() {
+    this.dataSource.paginator = this.paginator;
+  }
+
+}
+
+
+//posts.component.html
+<form class="">
+        <p class="hi">Objective</p> 
+        <div>
+         <input class="objective" type="text"  placeholder="" >
+         </div>
+
+         <p class="hi">Description</p> 
+          <div>
+           <input class="description"type="text" placeholder="" >
+        </div>
+    
+        <p class="hi">Key resullt</p> 
+        <div>
+                <input class="key"type="text" placeholder="" >
+             </div>
+         
+             <p class="hi">Submission date</p> 
+             <div>
+                     <input class="submission"type="text" Textholder="" >
+                  </div>
+
+      <button class="btns" block="true" type="submit"
+             routerLink="/admin"> send to </button>
+    
+     
+    </form> 
+    
+//posts.component.css
+
+.objective{
+    height: 70px;
+    width: 500px;
+
+}
+.description{
+    height: 150px;
+    width: 500px;
+}
+.key{
+    height: 50px;
+    width: 500px;
+}
+.submission{
+    height: 30px;
+   width: 500px;
+
+}
+.btns{
+    margin-top: 20px;
+    background-color: orchid;
+    height: 50px;
+    width: 500px;
+    border-radius: 20%;
+}
+.hi{
+    margin-bottom: 0px;
+    margin-top: 10px;
+    text-decoration-style: solid;
+    text-decoration-color: palevioletred;
+}
+
+//posts.component.ts
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-posts',
+  templateUrl: './posts.component.html',
+  styleUrls: ['./posts.component.css']
+})
+export class PostsComponent implements OnInit {
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+}
+
+
+//header.component.html
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <button mat-icon-button (click)="toggleSideBar()"> 
+            <mat-icon>menu</mat-icon>
+        </button>
+
+        <span> ADMIN PAGE </span>
+
+        <div fxFlex fxLayout="row" fxLayoutAlign="flex-end">
+            <ul fxLayout="row" fxLayoutGap="20px">
+                <li>
+                    <button mat-icon-button> 
+                        <mat-icon>settings</mat-icon>
+                    </button>
+                </li>
+                <li>
+                        <button mat-icon-button> 
+                                <mat-icon>help_outline</mat-icon>
+                            </button>
+                </li>
+                <li>
+                     <button mat-buutton [matMenuTriggerFor]="menu">
+                         <mat-icon>person_outline</mat-icon>
+                     </button>
+                     <mat-menu #menu="matMenu">
+                         <button mat-menu-item>
+                             <mat-icon>exit_to_app</mat-icon>
+                             Sign out
+                        </button>
+                        
+                     </mat-menu>
+                </li>
+            </ul>
+        </div>
+    </mat-toolbar-row>
+
+</mat-toolbar>
+
+
+//header.component.css
+ul li{
+    list-style: none ;
+}
+
+
+//header.component.ts
+import { Component, OnInit, Output,EventEmitter } from '@angular/core';
+
+
+@Component({
+  selector: 'app-header',
+  templateUrl: './header.component.html',
+  styleUrls: ['./header.component.css']
+})
+export class HeaderComponent implements OnInit {
+
+@Output() toggleSideBarForMe: EventEmitter<any> = new EventEmitter();
+  constructor() { }
+
+  ngOnInit() { }
+
+  toggleSideBar() {
+    this.toggleSideBarForMe.emit();
+
+  }
+
+}
+
+
+//footer.component.html
+<mat-divider></mat-divider>
+<footer>
+    &copy; All rights reserved 2019
+</footer>
+
+
+//footer.component.css
+footer{
+    padding: 20px;
+}
+
+
+
+//footer.component.ts
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-footer',
+  templateUrl: './footer.component.html',
+  styleUrls: ['./footer.component.css']
+})
+export class FooterComponent implements OnInit {
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+}
+
+
+//sidebar.component.html
+<mat-nav-list>
+    <div class="profile-card">
+        <div class="header">
+            <h2> Agbo Vincent</h2>
+            <h4>agbovincent100@gmail.com</h4>
+        </div>
+        <img src="https://byteworks.com.ng/images/excellence-icon.png" alt="Agbo vincent" >
+    </div>
+          <mat-divider></mat-divider>
+          <h2 matSubheader>Pages</h2>
+          <a mat-list-item routerLinkActive="list-item-active" routerLink="/default">Dashboard</a>
+          <a mat-list-item routerLinkActive="list-item-active" routerLink="/posts">Posts</a>
+          <a mat-list-item routerLinkActive="list-item-active" routerLink="/articles">Articles</a>
+         
+        <mat-divider></mat-divider>
+        
+        <h2 matSubheader>Tools</h2>
+
+        <a mat-list-item routerLinkActive="list-item-active" routerLink="/contacts">
+            <mat-icon>import_contacts</mat-icon>
+            Contacts
+        </a>
+
+        <a mat-list-item routerLinkActive="list-item-active" routerLink="/contacts">
+            <mat-icon>contact_phone</mat-icon>
+            Leads
+        </a>
+</mat-nav-list>
+
+//sidebar.component.css
+
+    .mat-icon {
+        vertical-align: middle;
+        margin-right:20px;
+
+    }
+
+.profile-card{
+    text-align: center;
+    padding: 0 20px 20px 20px;
+    
+}
+img{
+    width: 100px;
+    height:100px;
+    object-fit:cover;
+    border-radius:50%;
+}
+
+//sidebar.component.ts
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-sidebar',
+  templateUrl: './sidebar.component.html',
+  styleUrls: ['./sidebar.component.css']
+})
+export class SidebarComponent implements OnInit {
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+}
+
+//app.modules.ts
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule, Component } from '@angular/core';
+
+import { AppComponent } from './app.component';
+import { RouterModule } from '@angular/router';
+import { CheckboxModule} from 'angular-bootstrap-md';
+import { MaterialModule} from './material.module';
+
+import {  NO_ERRORS_SCHEMA,EventEmitter } from '@angular/core'; 
+import { CollapseModule, WavesModule } from 'angular-bootstrap-md';
+import {FormsModule} from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { LoginComponent } from './login/login.component';
+import { AdminComponent } from './admin/admin.component';
+import { HomeComponent } from './home/home.component';
+import { from } from 'rxjs';
+import { ObjectiveComponent } from './objective/objective.component';
+import { KeyResultComponent } from './key-result/key-result.component';
+import { MemberComponent } from './member/member.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { MatButtonModule } from '@angular/material/button';
+import { DefaultModule } from './layouts/default/default.module';
+import { DashboardComponent } from './modules/dashboard/dashboard.component';
+import { DefaultComponent } from './layouts/default/default.component';
+import { HeaderComponent } from './shared/components/header/header.component';
+import { FooterComponent } from './shared/components/footer/footer.component';
+import { SidebarComponent } from './shared/components/sidebar/sidebar.component';
+import { PostsComponent } from './modules/posts/posts.component';
+import { SharedModule } from './shared/shared.module';
+import { MatSidenavModule, MatDivider, MatDividerModule, MatToolbarModule, MatIconModule, MatMenuModule, MatListModule, MatCardModule, MatPaginatorModule, MatTableModule } from '@angular/material';
+import { FlexLayoutModule }  from '@angular/flex-layout';
+import { AreaComponent } from './shared/widgets/area/area.component';
+import { HighchartsChartModule} from 'highcharts-angular'
+import { CardComponent } from './shared/widgets/card/card.component';
+@NgModule({
+  declarations: [
+    AppComponent,
+    LoginComponent,
+    AdminComponent,
+    HomeComponent,
+    ObjectiveComponent,
+    KeyResultComponent,
+    MemberComponent,
+    DashboardComponent,
+    DefaultComponent,
+    CardComponent,
+   
+    PageNotFoundComponent,
+   
+    HeaderComponent,
+   
+    FooterComponent,
+   
+    SidebarComponent,
+    AreaComponent,
+   
+    PostsComponent
+  ],
+  imports: [
+    BrowserModule,
+    HttpClientModule,
+    MatButtonModule,
+    CheckboxModule,
+    CollapseModule,
+    MaterialModule,
+    FormsModule,
+    DefaultModule,
+    SharedModule,
+    MatSidenavModule,
+    MatDividerModule,
+    MatToolbarModule,
+    MatIconModule,
+    FlexLayoutModule,
+    MatMenuModule,
+    RouterModule,
+    MatListModule,
+    MatCardModule,
+    MatPaginatorModule,
+    HighchartsChartModule,
+    MatTableModule,
+    RouterModule.forRoot([
+      
+      {
+        path: 'login',
+        component:LoginComponent
+      },
+      // {
+      //    path: 'default',
+      //  component:DefaultComponent
+      //   },
+      {
+        path: '',
+        component: HomeComponent
+      },
+      {
+        path:'objective',
+        component: ObjectiveComponent
+      },
+      {
+        path: 'member',
+        component: MemberComponent
+       },
+       {
+        path: 'keyResult',
+        component: KeyResultComponent
+      },
+      
+    {path:'default',
+    component:DefaultComponent,
+    children:[{
+        path: '',
+        component:DashboardComponent
+    }]
+  },
+      
+    {
+      path:'posts',
+    component:DefaultComponent,
+    children:[{
+        path: '',
+        component:PostsComponent
+    }]
+  }
+
+  
+     
+    
+    ]),
+    BrowserAnimationsModule
+  ],
+  providers: [],
+  exports:[
+    HeaderComponent,
+    FooterComponent,
+    SidebarComponent,
+    AreaComponent,
+    CardComponent
+  ],
+    bootstrap: [AppComponent]
+})
+export class AppModule { }
+
+
+//card.component.html
+<div class="text">
+    <h4>{{ label }}</h4>
+    
+  <span class="image">
+      {{ src  }}
+  </span>
+
+   </div>
+
+//card.component.css
+.image{
+    background-image: url("https://byteworks.com.ng/images/excellence-icon.png");
+    width: 180px;
+    height: 180px;
+    margin-left: 8opx;
+} 
+.src{
+    background-image: url("https://byteworks.com.ng/images/excellence-icon.png");
+    width: 180px;
+    height: 180px;
+    margin-left: 8opx;
+}
+
+//card.component.ts
+import { Component, OnInit, Input } from '@angular/core';
+import * as Highcharts from 'highcharts';
+import HC_exporting from 'highcharts/modules/exporting';
+
+
+@Component({
+  selector: 'app-widget-card',
+  templateUrl: './card.component.html',
+  styleUrls: ['./card.component.css']
+})
+export class CardComponent implements OnInit {
+  @Input() label: string;
+  @Input() src: string;
+
+  Highcharts = Highcharts;
+
+  constructor() { }
+
+  ngOnInit() {
+    HC_exporting(this.Highcharts)
+  }
+
+}
+
+
+//area.component.html
+<highcharts-chart 
+  [Highcharts]="Highcharts"
+  [options]="chartOptions"
+
+  style="width: 100%; height: 400px; display: block;"
+></highcharts-chart>
+
+
+//area.components.ts
+import { Component, OnInit } from '@angular/core';
+import * as Highcharts from 'highcharts';
+import HC_exporting from 'highcharts/modules/exporting';
+
+
+@Component({
+  selector: 'app-widget-area',
+  templateUrl: './area.component.html',
+  styleUrls: ['./area.component.css']
+})
+export class AreaComponent implements OnInit {
+
+  chartOptions: {};
+
+  Highcharts = Highcharts;
+
+  constructor() { }
+
+  ngOnInit() {
+    this.chartOptions= {
+      chart: {
+          type: 'area'
+      },
+      title: {
+          text: 'Workers performance'
+      },
+      xAxis: {
+          categories: ['java', 'javascript', 'Angular', 'c#', 'python']
+      },
+      credits: {
+          enabled: false
+      },
+      series: [{
+          name: 'Vincent',
+          data: [5, 3, 4, 7, 2]
+      }, {
+          name: 'Kenneth',
+          data: [2, -2, -3, 2, 1]
+      }, {
+          name: 'Joe',
+          data: [3, 4, 4, -2, 5]
+      }]
+    
+  };
+  HC_exporting(Highcharts);
+  
+
+  setTimeout(() =>{
+    window.dispatchEvent(
+      new Event ('resize')
+    );
+  },300);
+
+  }
+}
+
+
+//objective.component.html
+<p class="hd">OBJECTIVE</p> 
+<form class="objective">
+        <p  class="Task1"> TASK 1: ======  Implement the front-end of the reference exercise using Angular framework 
+                (skip the backend API and database part for this exercise. Do just the frontend).  
+                Use local storage on the browser for persistence, so your application can be used
+                 even though all data is lost once the browser is closed.  
+                Implement automated tests for your application and run using the Protractor framework.  
+                Submission: Create a Github repository for your codebase and submit the repository link 
+                to   
+                <a href="">careers@byteworks.com.ng​, cc: ​damedu@byteworks.com.ng​ 
+           
+                </a>
+              
+        </p> 
+    
+       
+        
+        <p class="Task2"> TASK 2: ====== Design a relational database for your application 
+                (create tables that will be used to store your data) using your RDBMS of choice 
+                (PostgreSQL, MySQL, or H2). Ensure your tables are normalized up to the 3rd normal form. 
+                No need to populate with data.  
+                Submission: Export the DDL script for your database and submit to​ 
+                <a href="careers@byteworks.com.ng">careers@byteworks.com.ng​, cc: ​damedu@byteworks.com.ng​ 
+           
+                    </a>
+                   
+        </p> 
+
+
+               <p class="Task3"> TASK 3: ====== Implement a Restful API (Java or Node) to support create, read, update and delete (CRUD) actions for 
+                    1. Administrator (A default administrator should be created in the system) 2. Member 3. Objective  
+                   Note that an objective is assigned to a member upon creation. However, 
+                   it may be reassigned to another with a reason for reassignment.  
+                   Update the angular client created in Task 1 to consume the services exposed by the Restful API.  
+                   Submission: Create a Github repository for your codebase and submit the repository
+                    link to 
+                    <a href="careers@byteworks.com.ng">careers@byteworks.com.ng​, cc: ​damedu@byteworks.com.ng​ 
+           
+                        </a>
+                        
+                  
+               </p> 
+
+                  <p class="" >Duration​: 21 days. Submission before the deadline -17th December, 2019 is allowed.  </p> 
+
+
+                  <button class="btnview" block="true" type="submit"
+                  routerLink="/keyResult"> View Key Result</button>
+         
+                </form>
+
+
+//objective.component.css
+.objective{
+    justify-content: center;
+
+    background-color:white;
+    justify-content: center;
+    align-self: center;
+    background-size: auto;
+    height: 80vh;
+    width: 100vh;
+  
+    right: 20%;
+    left: 20%;
+
+    position: absolute;
+    margin-top: 10px;
+    }
+
+    .hd{
+
+       margin-left: 600px; 
+        justify-content: center;
+    }
+    .btnview{
+        background-color:red;
+        height:30px;
+        width:450px;
+        margin-top: 10px;
+        margin-left: 150px;
+
+    }
+    
+    //objective.component.ts
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-objective',
+  templateUrl: './objective.component.html',
+  styleUrls: ['./objective.component.css']
+})
+export class ObjectiveComponent implements OnInit {
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+}
+
+
+//keyResult.component.html
+<p class="hd">KEY RESULT</p> 
+<form class="result">
+        <p  class="Task1"> Task1 == The front end shoul have four pages such as Admin, member Registration,key result,objectives
+            Automated test should be implemented and will be run using protractor framework
+        </p> 
+    
+       
+        
+        <p class="Task2"> TASK 2: === The relational database management should be reduced to third normal form
+        </p> 
+
+
+               <p class="Task3"> TASK 3: === the CRUD rest API should be created for Admin, memeber, and objective
+                  
+               </p>
+
+
+                  <button class="btnview" block="true" type="submit"
+                  routerLink="/objective"> Go back to Objective</button>
+         
+                </form>
+
+//keyResult.component.css
+.result{
+    justify-content: center;
+
+    background-color:white;
+    justify-content: center;
+    align-self: center;
+    background-size: auto;
+    height: 80vh;
+    width: 100vh;
+  
+    right: 20%;
+    left: 20%;
+
+    position: absolute;
+    margin-top: 10px;
+    }
+
+    .hd{
+
+       margin-left: 600px; 
+        justify-content: center;
+    }
+    .btnview{
+        background-color:rgb(255, 123, 0);
+        height:30px;
+        width:450px;
+        margin-top: 10px;
+        margin-left: 130px;
+
+    }
+    
+    //keyResult.components.ts
+    import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-key-result',
+  templateUrl: './key-result.component.html',
+  styleUrls: ['./key-result.component.css']
+})
+export class KeyResultComponent implements OnInit {
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+}
+
+
+
+
+//PROTRACTOR AUTOMATED TESTING USING CHROME BROWSER
+//conf.js
+// An example configuration file.
+exports.config = {
+  directConnect: true,
+  idleTimeout:  690000,
+   delay:300000,
+
+  // Capabilities to be passed to the webdriver instance.
+  capabilities: {
+    'browserName': 'chrome',
+    "console": "integratedTerminal" 
+  },
+
+  // Framework to use. Jasmine is recommended.
+  framework: 'jasmine',
+
+  // Spec patterns are relative to the current working directory when
+  // protractor is called.
+  specs: ['demo.js'],
+
+  // Options to be passed to Jasmine.
+  jasmineNodeOpts: {
+    defaultTimeoutInterval: 90000,
+    delay:6789009
+    
+  }
+};
+
+//demo.js
+it('should get the pages', function() {
+    browser.get('http://localhost:4200');
+
+    browser.get('http://localhost:4200/login');
+    browser.get('http://localhost:4200/member');
+    browser.get('http://localhost:4200/objective');
+    browser.get('http://localhost:4200/keyResult');
+    browser.get('http://localhost:4200/default');
+    browser.get('http://localhost:4200/posts');
+
+});
+
+
+
+
+
+
+
+
+
+
+  
+   
+   
